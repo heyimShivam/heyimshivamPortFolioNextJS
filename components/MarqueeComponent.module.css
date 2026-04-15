@@ -1,0 +1,27 @@
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes marqueeReverse {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animateMarqueeReverse {
+    animation: marquee 420s linear infinite;
+}
+
+.animateMarquee {
+    animation: marqueeReverse 400s linear infinite;
+}

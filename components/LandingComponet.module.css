@@ -1,0 +1,9 @@
+.marqueeComponentInnerDiv {
+    position: absolute;
+    bottom: 70px;
+}
+
+.marqueeComponentOuterDiv {
+    position: absolute;
+    bottom: -100px;
+}
