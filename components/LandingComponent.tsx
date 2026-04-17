@@ -8,6 +8,10 @@ import MarqueeComponent from "./MarqueeComponent";
 import styles from './LandingComponet.module.css';
 import HoverRevealPattern from "./HoverRevealPattern";
 import ContactComponent from "./contactComponent";
+import FooterComponent from "./FooterComponent";
+import WorkExperienceComponent from "./workExperienceComponent";
+import ProjectsComponent from "./projectsComponent";
+import AchievementComponent from "./achievementComponent";
 
 const font = Rubik({
     subsets: ["latin"],
@@ -99,7 +103,7 @@ function LandingComponent() {
                                 <Link
                                     href={val.link}
                                     key={index}
-                                    className={`cursor-pointer border-2 rounded-md m-5 p-2 pl-9 pr-9 ${font.className} ${val.title === 'View My Work' ? 'bg-blue-500 border-blue-500' : 'border-gray-500'}`}
+                                    className={`cursor-pointer rounded-md m-5 p-2 pl-9 pr-9 ${font.className} ${val.title === 'View My Work' ? 'bg-blue-500 border-blue-500 hover:bg-blue-700' : 'border-2  border-gray-500'}`}
                                 >
                                     {val.title}
                                 </Link>
@@ -120,7 +124,20 @@ function LandingComponent() {
                 </div>
             </div>
 
+            <div className="mt-60">
+                <WorkExperienceComponent />
+            </div>
+
+            <div className="mt-20">
+                <AchievementComponent />
+            </div>
+
+            <div className="mt-60">
+                <ProjectsComponent />
+            </div>
+
             <ContactComponent />
+            <FooterComponent />
         </div>
     );
 }

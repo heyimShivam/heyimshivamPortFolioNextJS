@@ -1,4 +1,3 @@
-import styles from "./NavbarComponent.module.css";
 import { Rubik } from "next/font/google";
 
 const font = Rubik({
@@ -8,7 +7,7 @@ const font = Rubik({
 
 function NavbarComponent() {
     return (<div className={`bg-neutral-950 absolute top-0 text-white z-50 fixed w-full flex flex-row pt-2 justify-between font-normal ${font.className}`}>
-        <div className="p-4 pl-9 font-semibold cursor-pointer">&lt; heyimshivam /&gt;</div>
+        <div className="p-4 pl-9 font-semibold cursor-pointer">&lt;Heyimshivam /&gt;</div>
         <ul className="flex flex-row pr-9 font-normal text-md">
             <li className="relative p-4 cursor-pointer group">
                 Home
