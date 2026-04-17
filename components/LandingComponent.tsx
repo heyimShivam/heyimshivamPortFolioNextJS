@@ -1,13 +1,13 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { Google_Sans } from "next/font/google";
 import { Rubik } from "next/font/google";
-import { useState } from "react";
+// import { useState } from "react";
 
 import MarqueeComponent from "./MarqueeComponent";
 import styles from './LandingComponet.module.css';
 import HoverRevealPattern from "./HoverRevealPattern";
+import ContactComponent from "./contactComponent";
 
 const font = Rubik({
     subsets: ["latin"],
@@ -18,14 +18,14 @@ const inter = Google_Sans({
 });
 
 function LandingComponent() {
-    const [pos, setPos] = useState({ x: 50, y: 50 });
-    const [visible, setVisible] = useState(false);
+    // const [pos, setPos] = useState({ x: 50, y: 50 });
+    // const [visible, setVisible] = useState(false);
 
-    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-        const x = (e.clientX / window.innerWidth) * 100;
-        const y = (e.clientY / window.innerHeight) * 100;
-        setPos({ x, y });
-    };
+    // const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    //     const x = (e.clientX / window.innerWidth) * 100;
+    //     const y = (e.clientY / window.innerHeight) * 100;
+    //     setPos({ x, y });
+    // };
 
     const marqueeeText = [
         "Frontend Developer crafting modern, responsive web apps with React and Next.js.",
@@ -55,12 +55,11 @@ function LandingComponent() {
         <div>
             <div
                 className="w-full relative"
-                onMouseMove={handleMouseMove}
-                onMouseEnter={() => setVisible(true)}
-                onMouseLeave={() => setVisible(false)}
+            // onMouseMove={handleMouseMove}
+            // onMouseEnter={() => setVisible(true)}
+            // onMouseLeave={() => setVisible(false)}
             >
-                {/* Honeycomb pattern — fixed overlay, non-blocking */}
-                <HoverRevealPattern pos={pos} visible={visible} />
+                {/* <HoverRevealPattern pos={pos} visible={visible} /> */}
 
                 <div className="h-screen relative gap-6">
                     <div className="w-full h-screen flex flex-col justify-center items-center relative z-10">
@@ -121,9 +120,7 @@ function LandingComponent() {
                 </div>
             </div>
 
-            <div className="mt-24 pt-50 relative z-10">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex in unde, necessitatibus quod sunt tempora dolore vero eveniet nobis, quia ad aliquam. Ab quas tenetur aperiam ut dolor consectetur incidunt impedit vero vel, error quod nobis facere accusamus perferendis nisi natus fugit officia atque temporibus inventore doloribus! Sapiente molestiae voluptates voluptatem qui est, odit iure impedit saepe velit, vitae perspiciatis provident recusandae sed modi ad nihil libero nesciunt neque sint id! Vitae, culpa ea? Accusamus ex dolor explicabo facilis veritatis esse aut laudantium nam inventore distinctio repellendus, blanditiis ea sapiente fuga laboriosam laborum vitae pariatur mollitia fugiat consequuntur, rem facere.
-            </div>
+            <ContactComponent />
         </div>
     );
 }
